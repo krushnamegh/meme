@@ -1,11 +1,11 @@
 MEME = {
   $: jQuery,
 
-  render: function() {
+  render: function () {
     this.canvas && this.canvas.render();
   },
 
-  init: function() {
+  init: function () {
     this.model = new this.MemeModel(window.MEME_SETTINGS || {});
 
     // Create renderer view:
@@ -21,12 +21,12 @@ MEME = {
     });
 
     // Re-render view after all fonts load:
-    this.waitForFonts().then(function() {
+    this.waitForFonts().then(function () {
       MEME.render();
     });
   }
 };
 
-MEME.$(function() {
+MEME.$(function () {
   MEME.init();
 });
